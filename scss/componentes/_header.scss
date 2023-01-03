@@ -34,10 +34,10 @@ header {
     
     .header__icon--logo{
         @include position-icon-center;
+    }
 
-        &::before{
-            @include setup-icons(--fa-font-solid , "\f144", 28px, #fff); 
-        }
+    .header__icon--logo::before{
+        @include setup-icons(--fa-font-solid, "\f144", 28px, #fff); 
     }
 
     
