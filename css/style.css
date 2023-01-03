@@ -334,6 +334,7 @@ header .header__items .header__item .header__link .header__profile-picture {
 }
 
 .footer {
+  margin-top: auto;
   background-color: #000;
   padding: 10px;
   font-size: 16px;
@@ -343,4 +344,10 @@ header .header__items .header__item .header__link .header__profile-picture {
 .footer__title {
   color: #fff;
   text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }/*# sourceMappingURL=style.css.map */

@@ -3,3 +3,9 @@
 @use 'componentes/_navbar.scss' as *;
 @use 'componentes/main' as *;
 @use 'componentes/footer' as *;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
