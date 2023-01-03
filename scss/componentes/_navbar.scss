@@ -1,0 +1,97 @@
+@use '../parciais/variaveis' as *;
+@use '../parciais/icons' as *;
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top:56px;
+    left: -218px;
+    height: calc(100vh - 56px);
+    width: 250px;
+    background-color: rgb(61, 61, 61);
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 50px 50px 50px 50px 50px auto;
+    padding: 0 20px;
+    border-right: 1px solid #000;
+    transition: 1s ease-in-out;
+
+    &:hover {
+        left: 0;
+        transition: 0.5s ease-in-out;
+    } 
+
+    .navbar__active {
+        background-color:  rgb(136, 135, 135);
+    
+        & p {
+            color: #fff;
+        }
+
+    }
+    
+    .navbar__link {
+        color: #fff;
+        text-align: start;
+        text-decoration: none;
+        align-self: center;
+        border-radius: 10px;
+        padding: 0 30px 0 30px;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.116);
+        }
+
+        & p {
+            padding: 10px 0px;
+            margin: 0px 10px;
+        }
+    }
+
+
+    .navbar__icon--home{
+        @include position-icon-center;
+        
+        &::before {
+            @include setup-icons(--fa-font-solid , "\f015", $no-changes-to-size, #fff); 
+        }
+    }
+
+
+    .navbar__icon--subscriptions {
+        @include position-icon-center;
+
+        &::before{
+            @include setup-icons(--fa-font-solid , "\f24d", $no-changes-to-size, #fff); 
+        }
+    }
+
+    
+    .navbar__icon--library {
+        @include position-icon-center;
+
+        &::before{
+            @include setup-icons(--fa-font-solid , "\f0c9", $no-changes-to-size, #fff); 
+        }
+    }
+
+
+    .navbar__icon--history {
+        @include position-icon-center;
+
+        &::before{
+            @include setup-icons(--fa-font-solid , "\f1da", $no-changes-to-size, #fff); 
+        }
+    }
+
+
+    .navbar__icon--your-videos {
+        @include position-icon-center;
+
+        &::before{
+            @include setup-icons(--fa-font-solid , "\f008", $no-changes-to-size, #fff); 
+        }
+    }
+
+
+}

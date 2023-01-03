@@ -1,0 +1,24 @@
+$no-changes-to-size: -1;
+$dont-show:0;
+
+//I only need the type of class of the icon, not its specific class
+@mixin setup-icons ($icon-class, $icon-unicode, $text-size, $icon-color) {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var($icon-class);
+    content: $icon-unicode;
+    color: $icon-color;
+    @if $text-size > -1{
+        font-size: $text-size;
+    }
+}
+
+//you have to add paddding to the father class and not to the element that hosts the icon, otherwise it will fuck up the look
+@mixin position-icon-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
