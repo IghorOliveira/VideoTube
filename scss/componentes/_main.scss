@@ -4,11 +4,12 @@
 .main {
     padding: 10px 0;
     margin-top: 60px;
-    margin-left: 152px;
+    margin-left: 9.5rem;
+
     .main__videos{
         margin: 15px 15px 0 0;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 360px 360px 360px 360px;
         justify-content: center;
         align-items: center;
         column-gap: 15px;
@@ -49,7 +50,7 @@
                 & article h3 {
                     margin-top: 12px;
                     font-weight: bold;
-                    font-size: 16px;
+                    font-size: 1rem;
                     text-align: left;
                     /* yt video tittle wrapping and ellipsis */
                     display: -webkit-box;
@@ -62,10 +63,129 @@
                 & article p {
                     margin-top: 5px;
                     font-weight: 500;
-                    font-size: 14px;
+                    font-size: 0.875rem;
                 }
             }
         }
     }
 
+}
+
+// widths up to 1199px and heights of at least 768px
+@media screen and (max-width: 1199px) and (min-height: 1367px){
+    .main{
+        margin-left: 152px;
+        .main__videos {
+            grid-template-columns: repeat(4, calc(22.5rem * 0.533));
+            column-gap: 0.9375rem;
+            width: 85vw;
+
+            .main__video {
+                height: calc(20.125rem * 0.533);
+                width: calc(22.5rem * 0.533);
+                grid-template-rows: calc(13.875rem * 0.533)  calc(4.375rem * 0.533);
+                grid-template-columns: calc(22.5rem * 0.533);
+            }
+        }
+
+    }
+    
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1650px){
+    .main{
+        margin-left: 0;
+        .main__videos {
+            margin: 0 0;
+            grid-template-columns: repeat(4, calc(320px /* * 0.533 */));
+            column-gap: 0.5rem;
+            width: 85vw;
+
+            .main__video {
+                height: 100%;
+                width: 100%;
+                grid-template-rows: 20vh;
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}
+
+// widths up to 1199px and heights up tp 1366px
+@media screen and (max-width: 1199px) and (max-height: 1366px){
+    .main{
+        margin-left: 80px;
+        .main__videos {
+            margin: 0 0;
+            grid-template-columns: repeat(2, calc(360px /* * 0.533 */));
+            column-gap: 0.9375rem;
+            width: 85vw;
+
+            .main__video {
+                height: 100%;
+                width: 100%;
+                grid-template-rows: 25vh;
+                grid-template-columns: 100%;
+            }
+        }
+
+    }
+    
+}
+
+// widths up to 700px and heights up tp 767px
+@media screen and (max-width: 700px) and (max-height: 1366px){
+    .main{
+        margin: 0 0;
+        .main__videos {
+            margin: 0 0;
+            grid-template-columns: auto ;
+            row-gap: 0.9375rem;
+            width: 70vw;
+
+            .main__video {
+                height: 100%;
+                width: 100%;
+                grid-template-rows: 30vh;
+                grid-template-columns: 100%;
+            }
+        }
+
+    }
+    
+}
+
+@media screen and (max-width: 450px) and (max-height: 1366px){
+    .main {
+        .main__videos {
+            width: 80vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px){
+    .main {
+        margin: 0 0;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) and (min-height: 768px){
+    .main{
+        margin-left: 152px;
+        .main__videos {
+            margin: 15px 0 0 0;
+            grid-template-columns: repeat(4, calc(360px * 0.68));
+            column-gap: 15px;
+            width: 85vw;
+
+            .main__video {
+                height: calc(20.125rem * 0.68);
+                width: calc(22.5rem * 0.68);
+                grid-template-rows: calc(13.875rem * 0.68)  calc(4.375rem * 0.68);
+                grid-template-columns: calc(22.5rem * 0.68);
+            }
+        }
+
+    }
+    
 }

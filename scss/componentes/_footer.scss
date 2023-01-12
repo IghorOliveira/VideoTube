@@ -1,7 +1,12 @@
 @use '../parciais/variaveis' as *;
 
 .footer {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
     margin-top: auto;
+    width: 100%;
     background-color: #000;
     padding: 10px;
     font-size: 16px;
@@ -11,5 +16,11 @@
     &__title {
         color: #fff;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) and (max-height: 767px){
+    .footer{
+        display: none;
     }
 }
